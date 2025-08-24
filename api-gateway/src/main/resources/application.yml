@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway 
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8080
+  
+jwt:
+  secret: my-256-bit-secret-my-256-bit-secret 
